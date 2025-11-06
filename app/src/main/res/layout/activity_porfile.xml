@@ -5,6 +5,66 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Porfile">
+    tools:context=".activities.Profile">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:background="@color/main_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="Inico"
+                app:srcCompat="@drawable/home"
+                app:tint="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="Comprar"
+                app:srcCompat="@drawable/car_1"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btn_busqueda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="Buscar"
+                app:srcCompat="@drawable/search_1"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btn_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="Perfil"
+                app:srcCompat="@drawable/perfil"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

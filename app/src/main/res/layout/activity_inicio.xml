@@ -20,7 +20,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical" >
 
@@ -35,7 +35,7 @@
                 android:layout_width="244dp"
                 android:layout_height="98dp"
                 android:backgroundTint="@color/gray"
-                android:text="Compra Ya!"
+                android:text="@string/compra_ya"
                 android:textColor="@color/main_black"
                 android:textSize="34sp"
                 app:iconTint="@color/main_black" />
@@ -64,9 +64,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/main_black"
-                android:contentDescription="Inico"
+                android:contentDescription="@string/inico"
                 app:srcCompat="@drawable/home"
-                app:tint="@color/white" />
+                app:tint="@color/white"
+                />
 
             <ImageButton
                 android:id="@+id/btn_car"
@@ -74,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/main_black"
-                android:contentDescription="Comprar"
+                android:contentDescription="@string/comprar"
                 app:srcCompat="@drawable/car_1"
                 app:tint="@color/white" />
 
@@ -84,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/main_black"
-                android:contentDescription="Buscar"
+                android:contentDescription="@string/buscar"
                 app:srcCompat="@drawable/search_1"
                 app:tint="@color/white" />
 
@@ -94,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:backgroundTint="@color/main_black"
-                android:contentDescription="Perfil"
+                android:contentDescription="@string/perfil"
                 app:srcCompat="@drawable/perfil"
                 app:tint="@color/white" />
 
