@@ -2,6 +2,7 @@ package com.BuildItYourself.BIY.database
 
 import android.content.ContentValues
 import android.content.Context
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.BuildItYourself.BIY.models.Usuario
 import com.BuildItYourself.BIY.utils.PasswordHelper
@@ -34,13 +35,26 @@ class UsuarioDAO(context: Context) {
         return resultado != -1L
     }
 
-    //validar el login
+    //validar el login original
     fun validarLogin(email: String, password: String): Boolean {
         //obtener el usuario de la db por el email
         val usuario = obtenerUsuario(email)?:return false
         // verificar si la contrasena es correcta
         val passwordHased = PasswordHelper.hashPassword(password)
+        if (passwordHased == usuario.password){
+            return true
+        }else{
+            return false
+        }
     }
+    //validar el login prueba
+//    fun validarLogin(email: String, password: String): Usuario? {
+//        //obtener el usuario de la db por el email
+//        val usuario = obtenerUsuario(email)
+//        // verificar si la contrasena es correcta
+//        val passwordHased = PasswordHelper.hashPassword(password)
+//        return usuario
+//    }
     //obtener usuario de la db
     fun obtenerUsuario(email: String): Usuario?{
         //abrir bd solo modo lectura

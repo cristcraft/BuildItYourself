@@ -5,46 +5,149 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Login">
+    tools:context=".activities.Login"
+    android:background="@color/yellow">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
+        android:layout_width="410dp"
+        android:layout_height="667dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEamail"
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email" />
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:drawableTint="@color/main_black"
+                    android:hint="@string/email"
+                    android:outlineAmbientShadowColor="#000000"
+                    android:outlineProvider="background"
+                    android:outlineSpotShadowColor="#000000"
+                    android:shadowColor="@color/main_black"
+                    android:textColor="@color/main_black"
+                    android:textColorHighlight="#989A9D"
+                    android:textColorHint="@color/main_black"
+                    android:textColorLink="@color/main_black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="match_parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Contraseña" />
+                    android:hint="Contraseña"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:outlineAmbientShadowColor="#000000"
+                    android:outlineProvider="background"
+                    android:outlineSpotShadowColor="#000000"
+                    android:shadowColor="@color/main_black"
+                    android:textColor="@color/main_black"
+                    android:textColorHighlight="#989A9D"
+                    android:textColorHint="@color/main_black"
+                    android:textColorLink="@color/main_black"
+                    android:inputType="textPassword"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Iniciar Sesion" />
+                android:text="Iniciar Sesion"
+                android:textColor="@color/main_black"
+                android:textSize="24sp"
+                app:iconTint="@color/main_black"
+                android:backgroundTint="@color/gray"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/tvRegistrarse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrarse"
+                android:layout_margin="5dp"
+                android:textSize="16dp"
+                android:textColor="@color/main_black"
+                />
         </LinearLayout>
     </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:background="@color/main_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnNavInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="@string/inico"
+                app:srcCompat="@drawable/home"
+                app:tint="@color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/btnNavCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="@string/comprar"
+                app:srcCompat="@drawable/car_1"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnNavBusqueda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="@string/buscar"
+                app:srcCompat="@drawable/search_1"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btnNavPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/main_black"
+                android:contentDescription="@string/perfil"
+                app:srcCompat="@drawable/perfil"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

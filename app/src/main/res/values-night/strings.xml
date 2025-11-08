@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mi_perfil">Mi perfil</string>
+    <string name="productos">Productos</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="email">Email</string>
+</resources>

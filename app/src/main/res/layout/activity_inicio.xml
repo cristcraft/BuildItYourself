@@ -59,7 +59,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/btn_home"
+                android:id="@+id/btnNavInicio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -70,7 +70,7 @@
                 />
 
             <ImageButton
-                android:id="@+id/btn_car"
+                android:id="@+id/btnNavCarrito"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -80,7 +80,7 @@
                 app:tint="@color/white" />
 
             <ImageButton
-                android:id="@+id/btn_busqueda"
+                android:id="@+id/btnNavBusqueda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -90,7 +90,7 @@
                 app:tint="@color/white" />
 
             <ImageButton
-                android:id="@+id/btn_perfil"
+                android:id="@+id/btnNavPerfil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

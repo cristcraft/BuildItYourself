@@ -1,8 +1,10 @@
 package com.BuildItYourself.BIY.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +17,12 @@ import com.BuildItYourself.BIY.models.Usuario
 import com.google.android.material.textfield.TextInputEditText
 
 class Registro : AppCompatActivity() {
+    //navbar
+    private lateinit var btnInicio: ImageButton
+    private lateinit var btnPerfil: ImageButton
+    private lateinit var btnBusqueda: ImageButton
+    private lateinit var btnCarrito: ImageButton
+
     private lateinit var etNombre: TextInputEditText
     private lateinit var etEmail: TextInputEditText
     private lateinit var etDireccion: TextInputEditText
@@ -23,14 +31,15 @@ class Registro : AppCompatActivity() {
     private lateinit var tvIniciarSesion: TextView
     private val usuarioDAO = UsuarioDAO(context = this)
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_registro)
 
         //Inicializar el DAO
         val usuarioDAO = UsuarioDAO(context = this)
 
-        initiViews()
+        initViews()
         setupListeners()
     }
 
@@ -40,16 +49,49 @@ class Registro : AppCompatActivity() {
         }
         //Volver al login
         tvIniciarSesion.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        //navbar
+        btnInicio.setOnClickListener {
+            val intent = Intent(this, Inicio::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnCarrito.setOnClickListener {
+            val intent = Intent(this, Carrito::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnBusqueda.setOnClickListener {
+            val intent = Intent(this, Busqueda::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnPerfil.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
             finish()
         }
     }
 
-    private fun initiViews() {
+    private fun initViews() {
         etNombre = findViewById(R.id.etNombre)
         etEmail = findViewById(R.id.etEmail)
         etDireccion = findViewById(R.id.etDireccion)
         etPassword = findViewById(R.id.etPassword)
         btnRegistrar = findViewById(R.id.btnRegistrar)
+        tvIniciarSesion = findViewById(R.id.tvIniciarSesion)
+        //navbar
+        btnInicio = findViewById(R.id.btnNavInicio)
+        btnCarrito = findViewById(R.id.btnNavCarrito)
+        btnBusqueda = findViewById(R.id.btnNavBusqueda)
+        btnPerfil = findViewById(R.id.btnNavPerfil)
     }
 
     private fun Registro.registrarUsuario() {

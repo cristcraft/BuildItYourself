@@ -6,4 +6,11 @@
     <string name="comprar">Comprar</string>
     <string name="buscar">Buscar</string>
     <string name="perfil">Perfil</string>
+    <string name="mi_perfil">Mi perfil</string>
+    <string name="inicio">Inicio</string>
+    <string name="configuracion">Configuracion</string>
+    <string name="productos">Productos</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="info">Info</string>
+    <string name="email">Email</string>
 </resources>
