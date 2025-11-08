@@ -46,7 +46,7 @@ class Inicio : AppCompatActivity() {
             finish()
         }
 
-        btnPerfil.setOnClickListener {
+        btnComprar.setOnClickListener {
             val intent = Intent(this, Carrito::class.java)
             startActivity(intent)
             finish()
