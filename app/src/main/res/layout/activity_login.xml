@@ -23,6 +23,16 @@
             android:orientation="vertical"
             android:layout_gravity="center">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_margin="5dp"
+                android:textSize="36dp"
+                android:textColor="@color/main_black"
+                android:gravity="center"
+                />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="260dp"
                 android:layout_height="match_parent">
@@ -72,7 +82,7 @@
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Iniciar Sesion"
+                android:text="Enviar"
                 android:textColor="@color/main_black"
                 android:textSize="24sp"
                 app:iconTint="@color/main_black"
